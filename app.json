@@ -1,0 +1,12 @@
+{
+	"name": "Health 2 Sync",
+	"description": "Health Go Getting ...",
+	"keywords":[
+		"go",
+		"test-personal",
+		"sample",
+		"example"
+	],
+	"website": "http://github.com/heroku/test-personal",
+	"repository": "http://github.com/heroku/test-personal"
+}

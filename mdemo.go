@@ -15,10 +15,12 @@ import (
 
 	//"strconv"
 
+	"minlite"
+	//"go-heroku/test-personal/vendor/minlite"
 	"time"
 	//"github.com/markchuang56/minlite"
 	//"spx"
-	"go-heroku/test-personal/minlite"
+	//"go-heroku/test-personal/minlite"
 	//"github.com/garyburd/go-oauth/examples/session"
 	//"github.com/garyburd/go-oauth/oauth"
 )

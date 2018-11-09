@@ -3,6 +3,9 @@
 	"ignore": "test",
 	"package": [
 		{
+			"path": "/github.com/garyburd/go-oauth"
+		},
+		{
 			"path": "go-heroku/test-personal/minlite"
 		}
 	],

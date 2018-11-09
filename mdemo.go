@@ -22,8 +22,8 @@ import (
 	//"github.com/garyburd/go-oauth/oauth"
 )
 
-var homeTmpl = template.Must(template.New("home").ParseFiles("epochx.html"))
-var homeLoggedOutTmpl = template.Must(template.New("loggedout").ParseFiles("loggedout.html"))
+var homeTmpl = template.Must(template.New("home").ParseFiles("templates/epochx.html"))
+var homeLoggedOutTmpl = template.Must(template.New("loggedout").ParseFiles("templates/loggedout.html"))
 
 // serveAuthorize gets the OAuth temp credentials and redirects the user to the
 // Twitter's authorization page.
@@ -160,7 +160,6 @@ var httpAddr = flag.String("addr", ":8000", "HTTP server address")
 
 func main() {
 	fmt.Println("===== GARMIN GO =====")
-
 	flag.Parse()
 
 	//if err := readCredentials(); err != nil {

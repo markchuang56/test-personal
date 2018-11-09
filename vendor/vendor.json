@@ -1,0 +1,9 @@
+{
+	...
+	"rootPath": "github.com/heroku/health-inlet-80251",
+	"heroku": {
+		"install" : ["./..."],
+		"goVersion": "go1.11"
+	}
+	...
+}

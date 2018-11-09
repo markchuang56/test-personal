@@ -1,6 +1,11 @@
 {
 	"comment": "",
 	"ignore": "test",
+	"package": [
+		{
+			"path": "go-heroku/test-personal/minlite"
+		}
+	],
 	"rootPath": "github.com/heroku/go-heroku/test-personal",
 	"heroku": {
 		"install" : ["./..."],

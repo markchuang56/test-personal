@@ -16,8 +16,9 @@ import (
 	//"strconv"
 	"time"
 
+	"github.com/minlite"
 	//"spx"
-	"go-heroku/test-personal/minlite"
+	//"go-heroku/test-personal/minlite"
 	//"github.com/garyburd/go-oauth/examples/session"
 	//"github.com/garyburd/go-oauth/oauth"
 )

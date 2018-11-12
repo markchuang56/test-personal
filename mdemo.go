@@ -181,7 +181,7 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	xrouter := ginNew()
+	xrouter := gin.New()
 	fmt.Println(port)
 	fmt.Println(xrouter)
 

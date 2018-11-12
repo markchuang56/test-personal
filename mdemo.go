@@ -14,7 +14,7 @@ import (
 	"math"
 
 	//"strconv"
-	"github.com/gin-gonic/gin"
+	//"github.com/gin-gonic/gin"
 	"os"
 
 	//"minlite"
@@ -181,7 +181,8 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	router := ginNew()
+	//router := ginNew()
+	fmt.Println(port)
 
 	//u, _ := url.Parse("https://www.examplecasserver.com")
 	// Use a different auth URL for "Sign in with Twitter."
@@ -214,12 +215,24 @@ func main() {
 
 	fmt.Println("+++ HANDLE FUNC 4 +++")
 
-	router.Run(":" + port)
+	//router.Run(":" + port)
+
 	//if err := http.ListenAndServe(*httpAddr, nil); err != nil {
 	//	fmt.Println("+++ LISTEN ERROR +++")
 	//	log.Fatalf("Error listening, %v", err)
 	//}
 	fmt.Println("===== MAIN END =====")
+
+	router := gin.Default()
+
+	s := &http.Server{
+		Addr:           ":8080",
+		Handler:        router,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	s.ListenAndServe()
 
 }
 

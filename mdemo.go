@@ -14,6 +14,8 @@ import (
 	"math"
 
 	//"strconv"
+	"github.com/gin-gonic/gin"
+	"os"
 
 	//"minlite"
 	"github.com/markchuang56/minlite"
@@ -160,7 +162,7 @@ func demoServePingEpochs(w http.ResponseWriter, r *http.Request, cred *minlite.A
 	fmt.Fprintf(w, "DEMO PING EPOCHS!!")
 }
 
-var httpAddr = flag.String("addr", ":8000", "HTTP server address")
+//var httpAddr = flag.String("addr", ":8000", "HTTP server address")
 
 func main() {
 	fmt.Println("===== GARMIN GO =====")
@@ -172,6 +174,16 @@ func main() {
 		fmt.Println("===  ERROR 0  ===")
 	}
 
+	// added
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
+
+	router := ginNew()
+
+	//u, _ := url.Parse("https://www.examplecasserver.com")
 	// Use a different auth URL for "Sign in with Twitter."
 	//
 	//signinOAuthClient = spxClient
@@ -202,10 +214,11 @@ func main() {
 
 	fmt.Println("+++ HANDLE FUNC 4 +++")
 
-	if err := http.ListenAndServe(*httpAddr, nil); err != nil {
-		fmt.Println("+++ LISTEN ERROR +++")
-		log.Fatalf("Error listening, %v", err)
-	}
+	router.Run(":" + port)
+	//if err := http.ListenAndServe(*httpAddr, nil); err != nil {
+	//	fmt.Println("+++ LISTEN ERROR +++")
+	//	log.Fatalf("Error listening, %v", err)
+	//}
 	fmt.Println("===== MAIN END =====")
 
 }

@@ -3,15 +3,25 @@
 	"ignore": "test",
 	"package": [
 		{
-			"path": "/github.com/garyburd/go-oauth"
+			"checksumSHA1": "5PN4a18fXUBdbK3FWBzpizueADc=",
+			"origin": "github.com/markchuang56/minlite/vendor/github.com/garyburd/go-oauth/examples/session",
+			"path": "github.com/garyburd/go-oauth/examples/session",
+			"revision": "a2b732900b980561188e5b851d8dfc6d3d7a771a",
+			"revisionTime": "2018-11-10T14:35:15Z"
 		},
 		{
-			"path": "go-heroku/test-personal/minlite"
+			"checksumSHA1": "lPXxyOVG2BPwrisuWiC4d4Wrs6M=",
+			"origin": "github.com/markchuang56/minlite/vendor/github.com/garyburd/go-oauth/oauth",
+			"path": "github.com/garyburd/go-oauth/oauth",
+			"revision": "a2b732900b980561188e5b851d8dfc6d3d7a771a",
+			"revisionTime": "2018-11-10T14:35:15Z"
+		},
+		{
+			"checksumSHA1": "0RCH76vgOO55SPu4OJRO1H/1Ux4=",
+			"path": "github.com/markchuang56/minlite",
+			"revision": "a2b732900b980561188e5b851d8dfc6d3d7a771a",
+			"revisionTime": "2018-11-10T14:35:15Z"
 		}
 	],
-	"rootPath": "github.com/heroku/go-heroku/test-personal",
-	"heroku": {
-		"install" : ["./..."],
-		"goVersion": "go1.11"
-	}
+	"rootPath": "go-heroku/test-personal"
 }

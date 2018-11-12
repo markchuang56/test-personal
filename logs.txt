@@ -1,0 +1,89 @@
+jasonchuang@JVR: test-personal $ heroku logs --tail
+2018-11-09T10:34:24.571960+00:00 app[api]: Initial release by user jasonchuang56@hotmail.com
+2018-11-09T10:34:24.712927+00:00 app[api]: Enable Logplex by user jasonchuang56@hotmail.com
+2018-11-09T10:34:24.712927+00:00 app[api]: Release v2 created by user jasonchuang56@hotmail.com
+2018-11-09T10:34:24.571960+00:00 app[api]: Release v1 created by user jasonchuang56@hotmail.com
+2018-11-09T10:38:30.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T10:38:30.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T10:43:40.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T10:43:41.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T10:51:51.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T10:51:52.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T10:53:06.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T10:53:07.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:06:29.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:06:29.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:17:25.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:17:26.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:24:22.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:24:23.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:27:01.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:27:02.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:28:10.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:28:10.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:30:03.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:30:04.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:35:15.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:35:22.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:37:26.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:37:33.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:39:04.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:39:11.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T11:51:27.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T11:51:34.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T12:16:40.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T12:16:47.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T12:19:53.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T12:20:02.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T12:21:37.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T12:21:45.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T12:38:01.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T12:38:08.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T12:53:21.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T12:53:28.000000+00:00 app[api]: Build failed -- check your build logs
+2018-11-09T13:00:11.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T13:00:22.585007+00:00 heroku[web.1]: Starting process with command `test-personal`
+2018-11-09T13:00:25.795411+00:00 app[web.1]: rectangle package initialized at === OAUTH ===
+2018-11-09T13:00:25.795898+00:00 app[web.1]: ===== GARMIN GO =====
+2018-11-09T13:00:25.795948+00:00 app[web.1]: *****  READ CREDENTIALS  *****
+2018-11-09T13:00:25.796091+00:00 app[web.1]: === CREDENTIALS ===
+2018-11-09T13:00:25.796143+00:00 app[web.1]: {2446e117-da8b-40ac-a5ea-803e1ac53c82 YcyQKZ7b7vlnHkwzJTa3kTEACX6pFHTyJhk}
+2018-11-09T13:00:25.796201+00:00 app[web.1]: +++ HANDLE FUNC 4 +++
+2018-11-09T13:00:21.600127+00:00 app[api]: Scaled to web@1:Free by user jasonchuang56@hotmail.com
+2018-11-09T13:00:21.584662+00:00 app[api]: Deploy 1677bed2 by user jasonchuang56@hotmail.com
+2018-11-09T13:00:21.584662+00:00 app[api]: Release v3 created by user jasonchuang56@hotmail.com
+2018-11-09T13:00:40.000000+00:00 app[api]: Build succeeded
+2018-11-09T13:01:22.825591+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2018-11-09T13:01:22.825591+00:00 heroku[web.1]: Stopping process with SIGKILL
+2018-11-09T13:01:22.972559+00:00 heroku[web.1]: State changed from starting to crashed
+2018-11-09T13:01:22.974281+00:00 heroku[web.1]: State changed from crashed to starting
+2018-11-09T13:01:22.955099+00:00 heroku[web.1]: Process exited with status 137
+2018-11-09T13:01:23.405236+00:00 heroku[web.1]: Starting process with command `test-personal`
+2018-11-09T13:01:24.805987+00:00 app[web.1]: rectangle package initialized at === OAUTH ===
+2018-11-09T13:01:24.806213+00:00 app[web.1]: ===== GARMIN GO =====
+2018-11-09T13:01:24.806215+00:00 app[web.1]: *****  READ CREDENTIALS  *****
+2018-11-09T13:01:24.806298+00:00 app[web.1]: === CREDENTIALS ===
+2018-11-09T13:01:24.806302+00:00 app[web.1]: {2446e117-da8b-40ac-a5ea-803e1ac53c82 YcyQKZ7b7vlnHkwzJTa3kTEACX6pFHTyJhk}
+2018-11-09T13:01:24.806332+00:00 app[web.1]: +++ HANDLE FUNC 4 +++
+2018-11-09T13:02:23.605821+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2018-11-09T13:02:23.605910+00:00 heroku[web.1]: Stopping process with SIGKILL
+2018-11-09T13:02:23.667730+00:00 heroku[web.1]: Process exited with status 137
+2018-11-09T13:02:23.683561+00:00 heroku[web.1]: State changed from starting to crashed
+2018-11-09T13:07:12.000000+00:00 app[api]: Build started by user jasonchuang56@hotmail.com
+2018-11-09T13:07:22.417819+00:00 heroku[web.1]: State changed from crashed to starting
+2018-11-09T13:07:23.012542+00:00 heroku[web.1]: Starting process with command `test-personal`
+2018-11-09T13:07:21.238721+00:00 app[api]: Deploy 09a18cda by user jasonchuang56@hotmail.com
+2018-11-09T13:07:21.238721+00:00 app[api]: Release v4 created by user jasonchuang56@hotmail.com
+2018-11-09T13:07:25.936793+00:00 app[web.1]: rectangle package initialized at === OAUTH ===
+2018-11-09T13:07:25.937117+00:00 app[web.1]: ===== GARMIN GO =====
+2018-11-09T13:07:25.937119+00:00 app[web.1]: *****  READ CREDENTIALS  *****
+2018-11-09T13:07:25.937240+00:00 app[web.1]: === CREDENTIALS ===
+2018-11-09T13:07:25.937306+00:00 app[web.1]: {2446e117-da8b-40ac-a5ea-803e1ac53c82 YcyQKZ7b7vlnHkwzJTa3kTEACX6pFHTyJhk}
+2018-11-09T13:07:25.937312+00:00 app[web.1]: +++ HANDLE FUNC 4 +++
+2018-11-09T13:07:40.000000+00:00 app[api]: Build succeeded
+2018-11-09T13:08:23.129112+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2018-11-09T13:08:23.129202+00:00 heroku[web.1]: Stopping process with SIGKILL
+2018-11-09T13:08:23.183481+00:00 heroku[web.1]: Process exited with status 137
+2018-11-09T13:08:23.221449+00:00 heroku[web.1]: State changed from starting to crashed
+2018-11-09T13:08:24.515097+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=health-inlet-80251.herokuapp.com request_id=d7510355-ebdc-4b22-8b80-9d606b809661 fwd="203.74.120.58" dyno= connect= service= status=503 bytes= protocol=https
+2018-11-09T13:08:26.176479+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=health-inlet-80251.herokuapp.com request_id=bb7b6b9e-ca66-4bb8-b999-4bfe5f50ac89 fwd="203.74.120.58" dyno= connect= service= status=503 bytes= protocol=https

@@ -15,7 +15,8 @@ import (
 
 	//"strconv"
 
-	"minlite"
+	//"minlite"
+	"github.com/markchuang56/minlite"
 	//"go-heroku/test-personal/vendor/minlite"
 	"time"
 	//"github.com/markchuang56/minlite"

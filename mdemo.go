@@ -258,7 +258,7 @@ func main() {
 		c.HTML(http.StatusOK, "loggedout.tmpl.html", nil)
 	})
 
-	router.POST("/somePost", posting)
+	router.POST("/authorize", userServeAuthorize)
 
 	router.POST("/post", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)

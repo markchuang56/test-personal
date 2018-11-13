@@ -104,24 +104,28 @@ func respond(w http.ResponseWriter, t *template.Template, data interface{}) {
 	}
 }
 
-func demoServeHome(w http.ResponseWriter, r *http.Request, cred *minlite.ApiCredentials) {
+func demoServeHome(w http.ResponseWriter, r *http.Request) { //}, cred *minlite.ApiCredentials) {
 	fmt.Println(" *****  DEMO SERVE HOME  *****")
-	if r.URL.Path != "/" {
-		http.NotFound(w, r)
-		return
-	}
-	fmt.Println(cred)
-	fmt.Println("HOME")
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	if cred == nil {
-		if err := homeLoggedOutTmpl.ExecuteTemplate(w, "loggedout.html", nil); err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+	fmt.Fprintln(res, "DEMO SERVE HOME")
+	return
+	/*
+		if r.URL.Path != "/" {
+			http.NotFound(w, r)
+			return
 		}
-	} else {
-		if err := homeTmpl.ExecuteTemplate(w, "epochx.html", nil); err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+		fmt.Println(cred)
+		fmt.Println("HOME")
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		if cred == nil {
+			if err := homeLoggedOutTmpl.ExecuteTemplate(w, "loggedout.html", nil); err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+			}
+		} else {
+			if err := homeTmpl.ExecuteTemplate(w, "epochx.html", nil); err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+			}
 		}
-	}
+	*/
 }
 
 func demoServeGetDailies(w http.ResponseWriter, r *http.Request, cred *minlite.ApiCredentials) {
@@ -132,18 +136,22 @@ func demoServeGetDailies(w http.ResponseWriter, r *http.Request, cred *minlite.A
 	fmt.Println("==== SERVE GET DAILIES ==== OK ")
 }
 
-func demoServeGetEpochs(w http.ResponseWriter, r *http.Request, cred *minlite.ApiCredentials) {
-	fmt.Println("==== SERVE GET EPOCHS ====")
-	//tmStart, tmEnd := timeStampProcess(r)
-	//epochs := spx.ApiGetEpochs(w, r, cred, tmStart, tmEnd)
-	epochs := minlite.ApiGetEpochs(w, r, cred, " ", " ")
-	//var epochs []map[string]interface{}
-	fmt.Println("==== SERVE GET EPOCHS ==== OK ")
-	//fmt.Println(epochs)
-	//spx.ApiParseEpochs(epochs)
-	clientParseEpochs(w, epochs)
-	fmt.Println("WHAT'S UP ??")
-	//fmt.Fprintf(w, "HOW DO YOU TURN THIS ON!!")
+func demoServeGetEpochs(w http.ResponseWriter, r *http.Request) { //}, cred *minlite.ApiCredentials) {
+
+	fmt.Fprintln(res, "GET EPOCHS")
+	/*
+		fmt.Println("==== SERVE GET EPOCHS ====")
+		//tmStart, tmEnd := timeStampProcess(r)
+		//epochs := spx.ApiGetEpochs(w, r, cred, tmStart, tmEnd)
+		epochs := minlite.ApiGetEpochs(w, r, cred, " ", " ")
+		//var epochs []map[string]interface{}
+		fmt.Println("==== SERVE GET EPOCHS ==== OK ")
+		//fmt.Println(epochs)
+		//spx.ApiParseEpochs(epochs)
+		clientParseEpochs(w, epochs)
+		fmt.Println("WHAT'S UP ??")
+		//fmt.Fprintf(w, "HOW DO YOU TURN THIS ON!!")
+	*/
 }
 
 func demoServeGetActivities(w http.ResponseWriter, r *http.Request, cred *minlite.ApiCredentials) {
@@ -209,8 +217,9 @@ func main() {
 	fmt.Println("+++ HANDLE FUNC 4 +++")
 
 	//router.Run(":" + port)
-
-	http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
+	http.HandleFunc("/epoch", demoServeGetEpochs)
+	http.HandleFunc("/", demoServeHome)
+	//http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
 	//http.HandleFunc("/", hello)
 	fmt.Println("listening...")
 	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)

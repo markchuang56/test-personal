@@ -224,17 +224,40 @@ func main() {
 	//	log.Fatalf("Error listening, %v", err)
 	//}
 	fmt.Println("===== MAIN END =====")
+	/*
+		router := gin.Default()
 
-	router := gin.Default()
+		s := &http.Server{
+			Addr:           ":8080",
+			Handler:        router,
+			ReadTimeout:    10 * time.Second,
+			WriteTimeout:   10 * time.Second,
+			MaxHeaderBytes: 1 << 20,
+		}
+		s.ListenAndServe()
+	*/
 
-	s := &http.Server{
-		Addr:           ":8080",
-		Handler:        router,
-		ReadTimeout:    10 * time.Second,
-		WriteTimeout:   10 * time.Second,
-		MaxHeaderBytes: 1 << 20,
+	portx := os.Getenv("PORT")
+
+	fmt.Println("What's the PORT ??")
+	fmt.Println(port)
+
+	if port == "" {
+		log.Fatal("$PORT must be set")
 	}
-	s.ListenAndServe()
+
+	router := gin.New()
+	fmt.Println(router)
+
+	router.Use(gin.Logger())
+	router.LoadHTMLGlob("templates/*.tmpl.html")
+	router.Static("/static", "static")
+
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl.html", nil)
+	})
+
+	router.Run(":" + port)
 
 }
 

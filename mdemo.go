@@ -162,7 +162,7 @@ func demoServePingEpochs(w http.ResponseWriter, r *http.Request, cred *minlite.A
 	fmt.Fprintf(w, "DEMO PING EPOCHS!!")
 }
 
-//var httpAddr = flag.String("addr", ":8000", "HTTP server address")
+var httpAddr = flag.String("addr", ":8080", "HTTP server address")
 
 func main() {
 	fmt.Println("===== GARMIN GO =====")
@@ -192,12 +192,6 @@ func main() {
 	//signinOAuthClient.ResourceOwnerAuthorizationURI = "https://connect.garmin.com/oauthConfirm"
 
 	http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
-	//http.Handle("/", &spx.ApiAuthHandler{handler: demoServeHome, optional: true})
-
-	//http.Handle("/timeline", &authHandler{handler: serveTimeline})
-	//http.Handle("/messages", &authHandler{handler: serveMessages})
-	//http.Handle("/follow", &authHandler{handler: serveFollow})
-	//http.HandleFunc("/signin", serveSignin)
 
 	http.HandleFunc("/authorize", userServeAuthorize)
 
@@ -208,21 +202,16 @@ func main() {
 	http.Handle("/epochsPath", &demoAuthHandler{handler: demoServeGetEpochs})
 	http.Handle("/activitiesPath", &demoAuthHandler{handler: demoServeGetActivities})
 
-	/*
-		http.Handle("/dailies", &demoAuthHandler{handler: demoServeGetDailies})
-		http.Handle("/epochs", &demoAuthHandler{handler: demoServeGetEpochs})
-		http.Handle("/activities", &demoAuthHandler{handler: demoServeGetActivities})
-	*/
 	//http.Handle("/ping_epochs", &demoAuthHandler{handler: demoServePingEpochs})
 
 	fmt.Println("+++ HANDLE FUNC 4 +++")
 
 	//router.Run(":" + port)
 
-	//if err := http.ListenAndServe(*httpAddr, nil); err != nil {
-	//	fmt.Println("+++ LISTEN ERROR +++")
-	//	log.Fatalf("Error listening, %v", err)
-	//}
+	if err := http.ListenAndServe(*httpAddr, nil); err != nil {
+		fmt.Println("+++ LISTEN ERROR +++")
+		log.Fatalf("Error listening, %v", err)
+	}
 	fmt.Println("===== MAIN END =====")
 	/*
 		router := gin.Default()
@@ -236,42 +225,42 @@ func main() {
 		}
 		s.ListenAndServe()
 	*/
+	/*
+		portx := os.Getenv("PORT")
 
-	portx := os.Getenv("PORT")
+		fmt.Println("What's the PORT ??")
+		fmt.Println(port)
 
-	fmt.Println("What's the PORT ??")
-	fmt.Println(port)
+		if port == "" {
+			log.Fatal("$PORT must be set")
+		}
 
-	if port == "" {
-		log.Fatal("$PORT must be set")
-	}
+		router := gin.New()
+		fmt.Println(router)
 
-	router := gin.New()
-	fmt.Println(router)
+		router.Use(gin.Logger())
+		router.LoadHTMLGlob("templates/*.tmpl.html")
+		router.Static("/static", "static")
 
-	router.Use(gin.Logger())
-	router.LoadHTMLGlob("templates/*.tmpl.html")
-	router.Static("/static", "static")
+		router.GET("/", func(c *gin.Context) {
+			//c.HTML(http.StatusOK, "index.tmpl.html", nil)
+			c.HTML(http.StatusOK, "loggedout.tmpl.html", nil)
+		})
 
-	router.GET("/", func(c *gin.Context) {
-		//c.HTML(http.StatusOK, "index.tmpl.html", nil)
-		c.HTML(http.StatusOK, "loggedout.tmpl.html", nil)
-	})
+		//router.POST("/authorize", userServeAuthorize)
 
-	//router.POST("/authorize", userServeAuthorize)
+		router.GET("/post", func(c *gin.Context) {
+			c.HTML(http.StatusOK, "index.tmpl.html", nil)
+			//id := c.Query("id")
+			//page := c.DefaultQuery("page", "0")
+			//name := c.PostForm("name")
+			//message := c.PostForm("message")
+			fmt.Printf("What's this ??")
+			//fmt.Printf("id: %s; page: %s; name: %s; message: %s", id, page, name, message)
+		})
 
-	router.GET("/post", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl.html", nil)
-		//id := c.Query("id")
-		//page := c.DefaultQuery("page", "0")
-		//name := c.PostForm("name")
-		//message := c.PostForm("message")
-		fmt.Printf("What's this ??")
-		//fmt.Printf("id: %s; page: %s; name: %s; message: %s", id, page, name, message)
-	})
-
-	router.Run(":" + portx)
-
+		router.Run(":" + portx)
+	*/
 }
 
 func clientParseEpochs(w http.ResponseWriter, epochs []map[string]interface{}) {

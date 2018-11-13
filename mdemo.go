@@ -29,7 +29,9 @@ import (
 )
 
 var homeTmpl = template.Must(template.New("home").ParseFiles("templates/epochx.html"))
-var homeLoggedOutTmpl = template.Must(template.New("loggedout").ParseFiles("templates/loggedout.html"))
+
+//var homeLoggedOutTmpl = template.Must(template.New("loggedout").ParseFiles("templates/loggedout.html"))
+var homeLoggedOutTmpl = template.Must(template.New("loggedout").ParseFiles("templates/loggedout.tmpl.html"))
 
 // serveAuthorize gets the OAuth temp credentials and redirects the user to the
 // Twitter's authorization page.

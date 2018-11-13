@@ -106,7 +106,7 @@ func respond(w http.ResponseWriter, t *template.Template, data interface{}) {
 
 func demoServeHome(w http.ResponseWriter, r *http.Request) { //}, cred *minlite.ApiCredentials) {
 	fmt.Println(" *****  DEMO SERVE HOME  *****")
-	fmt.Fprintln(res, "DEMO SERVE HOME")
+	fmt.Fprintln(r, "DEMO SERVE HOME")
 	return
 	/*
 		if r.URL.Path != "/" {
@@ -138,7 +138,7 @@ func demoServeGetDailies(w http.ResponseWriter, r *http.Request, cred *minlite.A
 
 func demoServeGetEpochs(w http.ResponseWriter, r *http.Request) { //}, cred *minlite.ApiCredentials) {
 
-	fmt.Fprintln(res, "GET EPOCHS")
+	fmt.Fprintln(r, "GET EPOCHS")
 	/*
 		fmt.Println("==== SERVE GET EPOCHS ====")
 		//tmStart, tmEnd := timeStampProcess(r)
@@ -209,7 +209,7 @@ func main() {
 	http.HandleFunc("/callback", demoServeOAuthCallback)
 
 	http.Handle("/dailiesPath", &demoAuthHandler{handler: demoServeGetDailies})
-	http.Handle("/epochsPath", &demoAuthHandler{handler: demoServeGetEpochs})
+	//http.Handle("/epochsPath", &demoAuthHandler{handler: demoServeGetEpochs})
 	http.Handle("/activitiesPath", &demoAuthHandler{handler: demoServeGetActivities})
 
 	//http.Handle("/ping_epochs", &demoAuthHandler{handler: demoServePingEpochs})

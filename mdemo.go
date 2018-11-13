@@ -191,7 +191,7 @@ func main() {
 	//signinOAuthClient = spxClient
 	//signinOAuthClient.ResourceOwnerAuthorizationURI = "https://connect.garmin.com/oauthConfirm"
 
-	http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
+	//http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
 
 	http.HandleFunc("/authorize", userServeAuthorize)
 
@@ -208,10 +208,20 @@ func main() {
 
 	//router.Run(":" + port)
 
-	if err := http.ListenAndServe(*httpAddr, nil); err != nil {
-		fmt.Println("+++ LISTEN ERROR +++")
-		log.Fatalf("Error listening, %v", err)
+	http.HandleFunc("/", hello)
+	fmt.Println("listening...")
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	if err != nil {
+		panic(err)
 	}
+
+	/*
+		if err := http.ListenAndServe(*httpAddr, nil); err != nil {
+			fmt.Println("+++ LISTEN ERROR +++")
+			log.Fatalf("Error listening, %v", err)
+		}
+	*/
+
 	fmt.Println("===== MAIN END =====")
 	/*
 		router := gin.Default()
@@ -261,6 +271,10 @@ func main() {
 
 		router.Run(":" + portx)
 	*/
+}
+
+func hello(res http.ResponseWriter, req *http.Request) {
+	fmt.Fprintln(res, "hello, world")
 }
 
 func clientParseEpochs(w http.ResponseWriter, epochs []map[string]interface{}) {

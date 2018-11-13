@@ -208,7 +208,8 @@ func main() {
 
 	//router.Run(":" + port)
 
-	http.HandleFunc("/", hello)
+	http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
+	//http.HandleFunc("/", hello)
 	fmt.Println("listening...")
 	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	if err != nil {

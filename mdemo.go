@@ -190,23 +190,24 @@ func main() {
 	//
 	//signinOAuthClient = spxClient
 	//signinOAuthClient.ResourceOwnerAuthorizationURI = "https://connect.garmin.com/oauthConfirm"
+	/*
+		http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
+		//http.Handle("/", &spx.ApiAuthHandler{handler: demoServeHome, optional: true})
 
-	http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
-	//http.Handle("/", &spx.ApiAuthHandler{handler: demoServeHome, optional: true})
+		//http.Handle("/timeline", &authHandler{handler: serveTimeline})
+		//http.Handle("/messages", &authHandler{handler: serveMessages})
+		//http.Handle("/follow", &authHandler{handler: serveFollow})
+		//http.HandleFunc("/signin", serveSignin)
 
-	//http.Handle("/timeline", &authHandler{handler: serveTimeline})
-	//http.Handle("/messages", &authHandler{handler: serveMessages})
-	//http.Handle("/follow", &authHandler{handler: serveFollow})
-	//http.HandleFunc("/signin", serveSignin)
+		http.HandleFunc("/authorize", userServeAuthorize)
 
-	http.HandleFunc("/authorize", userServeAuthorize)
+		http.HandleFunc("/logout", userServeLogout)
+		http.HandleFunc("/callback", demoServeOAuthCallback)
 
-	http.HandleFunc("/logout", userServeLogout)
-	http.HandleFunc("/callback", demoServeOAuthCallback)
-
-	http.Handle("/dailiesPath", &demoAuthHandler{handler: demoServeGetDailies})
-	http.Handle("/epochsPath", &demoAuthHandler{handler: demoServeGetEpochs})
-	http.Handle("/activitiesPath", &demoAuthHandler{handler: demoServeGetActivities})
+		http.Handle("/dailiesPath", &demoAuthHandler{handler: demoServeGetDailies})
+		http.Handle("/epochsPath", &demoAuthHandler{handler: demoServeGetEpochs})
+		http.Handle("/activitiesPath", &demoAuthHandler{handler: demoServeGetActivities})
+	*/
 	/*
 		http.Handle("/dailies", &demoAuthHandler{handler: demoServeGetDailies})
 		http.Handle("/epochs", &demoAuthHandler{handler: demoServeGetEpochs})

@@ -83,5 +83,9 @@
 			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
-	"rootPath": "go-heroku/test-personal"
+	"rootPath": "go-heroku/test-personal",
+	"heroku": {
+		"install": ["./..."],
+		"goVersion": "go1.11"
+	}
 }

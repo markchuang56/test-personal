@@ -14,7 +14,7 @@ import (
 	"math"
 
 	//"strconv"
-	"github.com/gin-gonic/gin"
+	//"github.com/gin-gonic/gin"
 	"os"
 
 	//"minlite"
@@ -180,10 +180,10 @@ func main() {
 	if port == "" {
 		//log.Fatal("$PORT must be set")
 	}
-
-	xrouter := gin.New()
 	fmt.Println(port)
-	fmt.Println(xrouter)
+
+	//xrouter := gin.New()
+	//fmt.Println(xrouter)
 
 	//u, _ := url.Parse("https://www.examplecasserver.com")
 	// Use a different auth URL for "Sign in with Twitter."

@@ -260,7 +260,7 @@ func main() {
 
 	//router.POST("/authorize", userServeAuthorize)
 
-	router.POST("/post", func(c *gin.Context) {
+	router.GET("/post", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 		//id := c.Query("id")
 		//page := c.DefaultQuery("page", "0")

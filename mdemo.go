@@ -258,8 +258,10 @@ func main() {
 		c.HTML(http.StatusOK, "loggedout.tmpl.html", nil)
 	})
 
-	router.POST("/post", func(c *gin.Context) {
+	router.POST("/somePost", posting)
 
+	router.POST("/post", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 		id := c.Query("id")
 		page := c.DefaultQuery("page", "0")
 		name := c.PostForm("name")

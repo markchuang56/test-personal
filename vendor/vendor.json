@@ -4,7 +4,20 @@
 	"package": [
 		{
 			"checksumSHA1": "vF6nV6PvI8jgdrEI6V3d/xZo+fU=",
+			"origin": "go-heroku/vendor/github.com/garyburd/go-oauth/examples/session",
 			"path": "github.com/garyburd/go-oauth/examples/session",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "lPXxyOVG2BPwrisuWiC4d4Wrs6M=",
+			"origin": "go-heroku/vendor/github.com/garyburd/go-oauth/oauth",
+			"path": "github.com/garyburd/go-oauth/oauth",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "CMeRTxVVUibor9/p0zFyw1a8HkE=",
+			"origin": "go-heroku/vendor/github.com/markchuang56/minlite",
+			"path": "github.com/markchuang56/minlite",
 			"revision": ""
 		}
 	],

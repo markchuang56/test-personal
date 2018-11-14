@@ -136,7 +136,8 @@ func demoServeGetDailies(w http.ResponseWriter, r *http.Request, cred *minlite.A
 	fmt.Println("==== SERVE GET DAILIES ==== OK ")
 }
 
-func demoServeGetEpochs(w http.ResponseWriter, r *http.Request) { //}, cred *minlite.ApiCredentials) {
+//func demoServeGetEpochs(w http.ResponseWriter, r *http.Request) { //}, cred *minlite.ApiCredentials) {
+func demoServeGetEpochs(w http.ResponseWriter, r *http.Request, cred *minlite.ApiCredentials) {
 
 	fmt.Fprintln(w, "GET EPOCHS")
 	/*
@@ -217,7 +218,8 @@ func main() {
 	fmt.Println("+++ HANDLE FUNC 4 +++")
 
 	//router.Run(":" + port)
-	http.HandleFunc("/epoch", demoServeGetEpochs)
+	//http.HandleFunc("/epoch", demoServeGetEpochs)
+	http.Handle("/epochs", &demoAuthHandler{handler: demoServeGetEpochs})
 	http.HandleFunc("/", demoServeHome)
 	//http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
 	//http.HandleFunc("/", hello)

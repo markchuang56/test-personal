@@ -3,11 +3,11 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "5PN4a18fXUBdbK3FWBzpizueADc=",
+			"checksumSHA1": "66pT6Eh168IXicc0tmkhC4pjSyU=",
 			"origin": "github.com/markchuang56/minlite/vendor/github.com/garyburd/go-oauth/examples/session",
 			"path": "github.com/garyburd/go-oauth/examples/session",
-			"revision": "422cc319a070ea512adc9aa657ff16bd66ca32ad",
-			"revisionTime": "2018-11-14T05:28:54Z"
+			"revision": "4b35df8a5931cd2613869d116352a25b1b51fc5e",
+			"revisionTime": "2018-11-14T09:33:51Z"
 		},
 		{
 			"checksumSHA1": "lPXxyOVG2BPwrisuWiC4d4Wrs6M=",

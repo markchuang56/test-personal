@@ -1,5 +1,11 @@
 {
 	"comment": "",
+	"heroku": {
+		"goVersion": "go1.11",
+		"install": [
+			"./..."
+		]
+	},
 	"ignore": "test",
 	"package": [
 		{
@@ -83,9 +89,5 @@
 			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
-	"rootPath": "go-heroku/test-personal",
-	"heroku": {
-		"install": ["./..."],
-		"goVersion": "go1.11"
-	}
+	"rootPath": "go-heroku/test-personal"
 }

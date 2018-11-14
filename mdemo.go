@@ -80,16 +80,17 @@ type demoAuthHandler struct {
 
 func (h *demoAuthHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(" *****  DEMO SERVE HTTP  *****")
+	/*
+		cred := minlite.ApiServeHTTP(w, r)
 
-	cred := minlite.ApiServeHTTP(w, r)
-
-	if cred == nil && !h.optional {
-		//if cred == nil && !optional {
-		http.Error(w, "Not logged in.", 403)
-	}
-	fmt.Println(cred)
-	h.handler(w, r, cred)
-	//h.handler(w, r, nil)
+		if cred == nil && !h.optional {
+			//if cred == nil && !optional {
+			http.Error(w, "Not logged in.", 403)
+		}
+		fmt.Println(cred)
+		h.handler(w, r, cred)
+	*/
+	h.handler(w, r, nil)
 }
 
 // response responds to a request by executing the html remplate t with data.

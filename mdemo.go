@@ -219,7 +219,8 @@ func main() {
 
 	//router.Run(":" + port)
 	//http.HandleFunc("/epoch", demoServeGetEpochs)
-	http.Handle("/epochs", &demoAuthHandler{handler: demoServeGetEpochs})
+	//http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
+	http.Handle("/epochs", &demoAuthHandler{handler: demoServeGetEpochs, optional: true})
 	http.HandleFunc("/", demoServeHome)
 	//http.Handle("/", &demoAuthHandler{handler: demoServeHome, optional: true})
 	//http.HandleFunc("/", hello)
